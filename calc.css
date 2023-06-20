@@ -1,0 +1,71 @@
+.container{
+padding: 3px;
+color: white;
+background-color: rgb(60, 45, 75);
+
+font-size: 24px;
+width:300px;
+height:400px;
+margin: auto;  
+border: solid black 2px; 
+}
+div{
+    display: flex;
+    flex: 1, 1, 0;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: beige;
+    
+}
+div.row{
+    background-color: rgb(60, 45, 75);
+    display: flex;
+    flex: 1 1 0;
+    margin:0;
+    padding: 0;
+    text-align: justify;
+    align-items: center ;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.ac, div.display{
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 1px 2px;
+    border-radius: 2px;
+    width: 100px;
+    height: 63px;
+    box-shadow: 0.5px 0.5px #888888;
+}
+div.zero{
+    display: flex;
+    flex:2.06 1 0;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 105px;
+    height: 63px;
+    margin: 1px 2px;
+    border-radius: 2px;
+    box-shadow: 0.5px 0.5px #888888;
+
+}
+.display{
+    color:black;
+    font-size: 50px;
+    font-style: italic;
+    font-weight: bolder;
+
+}
+.op{
+    background-color: rgb(206, 47, 100);
+}
+.num{
+    background-color: rgb(0, 77, 77);
+}
+.func{
+    background-color: teal;
+}
