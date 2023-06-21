@@ -1,15 +1,15 @@
 .container{
-padding: 3px;
-color: white;
-background-color: rgb(60, 45, 75);
-
-font-size: 24px;
-width:300px;
-height:400px;
-margin: auto;  
-border: solid black 2px; 
+    padding: 3px;
+    color: white;
+    background-color: rgb(60, 45, 75);
+    width:300px;
+    height:400px;
+    margin: auto;  
+    border: solid black 2px; 
 }
-div{
+div, button{
+    color: white;
+    font-size: 24px;   
     display: flex;
     flex: 1, 1, 0;
     flex-direction: column;
@@ -17,7 +17,7 @@ div{
     background-color: beige;
     
 }
-div.row{
+.row{
     background-color: rgb(60, 45, 75);
     display: flex;
     flex: 1 1 0;
@@ -28,7 +28,7 @@ div.row{
     flex-direction: row;
     justify-content: space-between;
 }
-div.ac, div.display{
+.num,.eval, .op, .func, #del{
     display: flex;
     flex: 1 1 0;
     justify-content: center;
@@ -38,11 +38,38 @@ div.ac, div.display{
     border-radius: 2px;
     width: 100px;
     height: 63px;
-    box-shadow: 0.5px 0.5px #888888;
 }
-div.zero{
+
+#display{
     display: flex;
-    flex:2.06 1 0;
+    flex: 1 1 0;
+    justify-content: end;
+    align-items: end;
+    border-radius: 2px;
+    padding-right: 5px;
+    width: 100px;
+    height: 63px;
+    color:black;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: bolder;
+    margin: 2px 2px;
+    text-align: end;
+
+
+}
+.op, .eval{
+    background-color: rgb(206, 47, 100);
+}
+.num{
+    background-color: rgb(0, 77, 77);
+}
+.func, #del{
+    background-color: teal;
+}
+#zero{
+    display: flex;
+    flex:2.35 1 0;
     justify-content: center;
     align-items: center;
     text-align: justify;
@@ -50,22 +77,5 @@ div.zero{
     height: 63px;
     margin: 1px 2px;
     border-radius: 2px;
-    box-shadow: 0.5px 0.5px #888888;
 
-}
-.display{
-    color:black;
-    font-size: 50px;
-    font-style: italic;
-    font-weight: bolder;
-
-}
-.op{
-    background-color: rgb(206, 47, 100);
-}
-.num{
-    background-color: rgb(0, 77, 77);
-}
-.func{
-    background-color: teal;
 }
