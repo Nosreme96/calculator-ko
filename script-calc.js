@@ -52,7 +52,7 @@ buttons.forEach(button => button.addEventListener('click', function uiButton(){
          document.getElementById('display').innerHTML = var2.join("");
 
     }
-    else if(var1.length != 0 &&  button.className=="op")
+    else if(var1.length != 0 &&  button.className=="op" && var2.length == 0)
     {
                 if(operand.length==0)
         {
@@ -81,13 +81,19 @@ buttons.forEach(button => button.addEventListener('click', function uiButton(){
         answer.length =0;
         document.getElementById('display').innerHTML="0";
     }
-    if(var1.length!=0 && operand.length !=0 && button.innerText == "=")
+    else if(var1.length!=0 && operand.length !=0 && var2.length!= 0 && button.innerText == "=" || button.className == "op")
     {
+        console.log("main function executed");
+        if(operand[0] == "/" && var2.length == 1 && var2[0] == "0"){
+            document.getElementById('display').innerHTML = "nope";
+            return;
+        }
         answer = math_it_up[operand[0]](var1.join(""), var2.join(""));
         console.log(answer);
         console.log(var1, operand, var2);
         clear();
         var1 = Array.from(answer.toString()).slice(0,9);
+        operand[0] = button.innerText;
         document.getElementById('display').innerHTML=var1.join("");
     }
 }));
