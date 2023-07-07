@@ -27,11 +27,11 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach(button => button.addEventListener('click', function uiButton(){
     if(strRegex.test(button.innerText) && operand.length == 0)
     {      
-        if(button.innerText == "." && !var1.includes('.') && dot == 0 && var1.length<=9) {
+        if(button.innerText == "." && !var1.includes('.') && dot == 0 && var1.length<9) {
             var1.push(button.innerText); 
             dot = 1;
          } 
-         else if(button.innerText != "."  && var1.length<=9)
+         else if(button.innerText != "."  && var1.length<9)
          {
             var1.push(button.innerText); 
          }
@@ -41,11 +41,11 @@ buttons.forEach(button => button.addEventListener('click', function uiButton(){
     }
     else if(strRegex.test(button.innerText) && operand.length != 0)
     {
-        if(button.innerText== "." && !var2.includes('.') && dot == 0  && var2.length<=9) {
+        if(button.innerText== "." && !var2.includes('.') && dot == 0  && var2.length<9) {
             var2.push(button.innerText); 
             dot = 1;
          } 
-         else if(button.innerText != "." && var2.length<=9)
+         else if(button.innerText != "." && var2.length<9)
          {
             var2.push(button.innerText); 
          }
