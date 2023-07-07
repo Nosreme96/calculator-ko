@@ -55,6 +55,7 @@ div, button{
     font-weight: bolder;
     margin: 2px 2px;
     text-align: end;
+    overflow: hidden;
 
 
 }
